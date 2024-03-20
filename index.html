@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+      
+    
+    <title>Admin</title>
+    
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!--Top navbar star-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!--offcanvas trigger start-->
+        <button
+          class="navbar-toggler me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--offcanvas trigger end-->
+        <a
+          class="navbar-brand text-uppercase fw-bold text-uppercase me-auto"
+          href="#"
+          >LMS Admin</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-auto" role="search">
+            <div class="input-group my-3 my-lg-0">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary btn-primary"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="logo.jpg" class="user-icon" />
+                Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Top navbar end-->
+
+    <!--offcanvas start-->
+
+    <div
+      class="offcanvas offcanvas-start bg-dark text-white sidebar-nav"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="text-secondary small text-uppercase fwbold">Core</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <i class="fa-solid fa-gauge"></i> Dashboard</a
+            >
+          </li>
+          <li class="nav-item my-0">
+            <hr />
+          </li>
+          <li class="nav-item">
+            <div class="text-secondary small text-uppercase fwbold">
+              Inventory
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              href="#booksMgmt"
+              role="button"
+              aria-expanded="false"
+              aria-controls="booksMgmt"
+            >
+              <i class="fas fa-book me-2"></i> Books Management
+              <span class="right-icon float-end"><i class="fas fa-chevron-down float-end"></i></span>
+            </a> 
+            <div class="collapse" id="collapseExample">
+              <div>
+                <ul class="navbar-nav ps-3"></ul>
+                <li>
+                  <a href="#" class="nav-link"><i class="far fa-plus me-2"></i> Add New</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link"> <i class="fa-solid fa-list me-2"></i>Manage all</a>
+                </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link sidebar-link"
+                  data-bs-toggle="collapse"
+                  href="#studentMgmt"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="studentMgmt"
+                >
+                  <i class="fa-solid fa-user me-2"></i> Students
+                  <span class="right-icon float-end"><i class="fa-solid fa-chevron-down "></i></span>
+                </a>
+    
+                <div class="collapse" id="collapseExample">
+                  <div>
+                    <ul class="navbar-nav ps-3"></ul>
+                    <li>
+                      <a href="#" class="nav-link"><i class="fa-solid fa-plus me-2"></i> Add New</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link"> <i class="fa-solid fa-list me-2"></i>Manage all</a>
+                    </li>
+                  </div>
+              </li>
+            </li>
+          </li>
+          
+          </li>
+        </ul>
+        <button>Logout</button>
+      </div>
+
+      </div>
+    </div>
+    <!--Offcanvas end-->
+
+    <!--Main content start-->
+    <main class="mt-1 pt-3">
+      <div class="container-fluid">
+        <!--Cards start-->
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="fw-bold text-uppercase ">Dashboard</h4>
+            <p>Statistics of the system!</p>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title text-uppercase text-muted
+                ">Total books</h5>
+               <h6>130</h6>
+                <a href="#" class="card-link link-underline-light">View more</a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title text-uppercase text-muted
+                ">Total Students</h5>
+               <h6>1230</h6>
+                <a href="#" class="card-link link-underline-light">View more</a>
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title text-uppercase text-muted
+                ">Total books Loan</h5>
+               <h6>168</h6>
+                <a href="#" class="card-link link-underline-light">View more</a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Cards end-->
+        <!--Tabs start-->
+        <div class="row mt-5">
+          <div class="col md-12"><ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button 
+              class="nav-link text-uppercase active" 
+              id="home-tab" 
+              data-bs-toggle="tab" 
+              data-bs-target="#home-tab-pane" 
+              type="button" 
+              role="tab" 
+              aria-controls="home-tab-pane" 
+              aria-selected="true">New Students</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button 
+              class="nav-link text-uppercase" id="recent-loans-tab" data-bs-toggle="tab" data-bs-target="#recent-loans-tab-pane" type="button" role="tab" aria-controls="recent-loans-tab-pane" aria-selected="false">Recent Loans</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-uppercase" id="recent-subscription-tab" data-bs-toggle="tab" data-bs-target="#recent-subscription-tab-pane" type="button" role="tab" aria-controls="recent-subscription-tab-pane" aria-selected="false">Recent Subscriptions</button>
+            </li>
+            
+          </ul>
+          <div class="tab-content" 
+            id="myTabContent">
+            <div 
+             class="tab-pane fade show active" 
+             id="recent-students-pane" 
+             role="tabpanel" 
+             aria-labelledby="recent-students" 
+             tabindex="0">
+             <table class="table">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Book Name</th>
+                  <th scope="col">Registration date</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Ronim</td>
+                  <td>DBMS</td>
+                  <td>10-02-2024, 10:30 PM</td>
+                  <td><span class="badge text-bg-success">Active</span></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sudip</td>
+                  <td>OS</td>
+                  <td>10-02-2024, 10:30 PM</td>
+                  <td><span class="badge text-bg-danger">Inactive</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            </div>
+            <div 
+             class="tab-pane fade" 
+             id="profile-tab-pane" 
+             role="tabpanel" 
+             aria-labelledby="profile-tab" 
+             tabindex="0">...
+          </div>
+            <div 
+             class="tab-pane fade" 
+             id="contact-tab-pane" 
+             role="tabpanel" 
+             aria-labelledby="contact-tab" 
+             tabindex="0">...
+             </div>
+            <div 
+             class="tab-pane fade" 
+             id="disabled-tab-pane" 
+             role="tabpanel"  
+             aria-labelledby="disabled-tab" 
+             tabindex="0">...
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
+      </div>
+    </main>
+    <!--Main content end-->
+    <script
+      src="/bootstrap-4.0.0-dist/js/bootstrap.bundle.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/05ccc8cbaf.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
